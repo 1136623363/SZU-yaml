@@ -3,7 +3,7 @@
 # 获取ifconfig输出，并使用grep过滤包含"172."的行，然后使用awk提取IP地址部分
 ip_output=$(ifconfig | grep -o 'inet addr:[^ ]*' | grep '172.' | awk -F: '{print $2}')
 
-device=$(uname -n)
+device=$(uname -a | awk '{split($5, a, "-"); print $2 "_" a[1] "_" substr($4, 1, 3) "_" $6}')
 # 打印提取到的IP地址和设备名
 echo "$ip_output"
 echo "$device"
