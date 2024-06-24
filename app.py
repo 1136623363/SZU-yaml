@@ -45,6 +45,22 @@ def download_test_yaml():
     # 使用 Flask 提供的 send_file 函数发送文件
     return send_file(file_path, as_attachment=True)
 
+@app.route('/install.sh', methods=['GET'])
+def download_install_yaml():
+    # 指定 szu.yaml 文件的路径
+    file_path = './install.sh'
+
+    # 使用 Flask 提供的 send_file 函数发送文件
+    return send_file(file_path, as_attachment=True)
+
+@app.route('/device_ip.sh', methods=['GET'])
+def download_device_ip_yaml():
+    # 指定 szu.yaml 文件的路径
+    file_path = './device_ip.sh'
+
+    # 使用 Flask 提供的 send_file 函数发送文件
+    return send_file(file_path, as_attachment=True)
+
 @app.route('/', methods=['GET'])
 def get_ip():
     # 获取请求参数中的 IP 地址和设备名称
