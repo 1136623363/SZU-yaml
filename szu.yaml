@@ -1,0 +1,52 @@
+allow-lan: true
+external-controller: 127.0.0.1:9090
+log-level: info
+mode: Rule
+port: 7890
+proxies:
+- cipher: None
+  name: "\u6559\u5B66\u533A 20M"
+  port: 8080
+  server: 172.30.192.25
+  type: http
+  udp: true
+
+- cipher: aes-256-cfb
+  name: RT-AC54U-1
+  password: '1234567890'
+  port: 8388
+  server: 172.31.82.190
+  type: ss
+  udp: true
+
+- cipher: aes-256-cfb
+  name: MI-R3G
+  password: '1234567890'
+  port: 8388
+  server: 172.29.30.195
+  type: ss
+  udp: true
+
+- cipher: aes-256-cfb
+  name: RT-AC54U-2
+  password: '1234567890'
+  port: 8388
+  server: 172.29.35.85
+  type: ss
+  udp: true
+
+- cipher: aes-256-cfb
+  name: RT-AC54U-3
+  password: '1234567890'
+  port: 8388
+  server: 172.29.39.183
+  type: ss
+  udp: true
+
+- cipher: aes-256-cfb
+  name: RT-AC54U-4
+  password: '1234567890'
+  port: 8388
+  server: 172.29.147.82
+  type: ss
+  udp: true
